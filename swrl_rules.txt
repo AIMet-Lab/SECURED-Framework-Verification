@@ -1,0 +1,26 @@
+Rule 0
+
+sec:RBAC_token(user, ?token) ^ sec:RBAC_rule(?component, ?rule) ^ swrlb:equal(?token, ?rule) -> sec:userAccess(user, ?component)
+
+
+RULE 1
+
+odtmi:CAPEC(?capec) ^  sec:SECURED_innohub(?secured) ^ sec:technical_specification(?secured, ?spec) ^ odtmb:hasDescription(?capec, ?desc) ^ swrlb:containsIgnoreCase(?desc, ?spec) -> odtmb:hasTarget(?capec, ?secured)
+
+Rule 2
+
+odtmi:CWE(?cwe) ^ sec:SECURED_innohub(?secured) ^ sec:technical_specification(?secured, ?spec) ^ odtmb:hasDescription(?cwe, ?desc) ^ swrlb:containsIgnoreCase(?desc, ?spec) -> odtmb:hasTarget(?cwe, ?secured)
+
+Rule 3
+
+odtmi:CVE(?cve) ^ sec:SECURED_innohub(?secured) ^ sec:technical_specification(?secured, ?spec) ^ odtmb:hasDescription(?cve, ?desc) ^ swrlb:containsIgnoreCase(?desc, ?spec) -> odtmb:hasTarget(?cve, ?secured)
+
+
+Rule 4
+
+odtmi:CAPEC(?capec) ^ sec:SECURED_innohub(?secured) ^ sec:technical_specification(?secured, ?spec) ^ sec:note(?capec, ?nt) ^ swrlb:containsIgnoreCase(?nt, ?spec) -> odtmb:hasTarget(?capec, ?secured)
+
+
+Rule 5
+
+odtmi:CWE(?cwe) ^ sec:SECURED_innohub(?secured) ^ sec:technical_specification(?secured, ?spec) ^ sec:note(?cwe, ?nt) ^ swrlb:containsIgnoreCase(?nt, ?spec) -> odtmb:hasTarget(?cwe, ?secured)
