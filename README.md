@@ -4,6 +4,6 @@ This repository contains resources related to the SECURED framework, focusing on
 
 Key elements of this repository include:
 
-- The OWL file representing the SECURED Ontology and Knowledge Graph (KG).
+- The OWL file representing the SECURED ontology.
 - Documentation on the modeling of system components, data flows, and threats.
 - Rules for security verification and automated reasoning.
